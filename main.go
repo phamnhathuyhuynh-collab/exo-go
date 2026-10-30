@@ -178,7 +178,7 @@ func main() {
 	// Exercice 4
 	fmt.Println("--- Exercice 4 ---")
 	store := &MemoryStore{notes: make(map[string]*Note)}
-	var _ NoteStore = store // Vérifie que MemoryStore respecte l'interface
+	var _ NoteStore = store
 	note.ID = "1"
 	fmt.Println("Save :", store.Save(note))
 	fmt.Println("Doublon :", errors.Is(store.Save(note), ErrDuplicate))
